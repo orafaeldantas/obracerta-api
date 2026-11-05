@@ -76,7 +76,7 @@ Testes de integração usam Testcontainers e exigem Docker em execução.
 
 ### API
 
-- Recursos nomeados no plural e em inglês (ex.: `/constructions/{id}/expenses`).
+- Recursos nomeados no plural e em inglês, sob o prefixo `/api/v1` (ex.: `/api/v1/constructions/{id}/expenses`). Ver ADR 0005.
 - Métodos e códigos de status HTTP usados de acordo com sua semântica.
 - Entradas validadas com Bean Validation nos DTOs.
 - Erros padronizados no formato Problem Details (RFC 9457), com tratamento centralizado em `@RestControllerAdvice`.
