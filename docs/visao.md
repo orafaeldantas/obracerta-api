@@ -9,7 +9,7 @@
 | **Público inicial** | Construções e reformas residenciais |
 | **Backend** | Java (LTS) + Spring Boot |
 | **Arquitetura inicial** | Monólito modular expondo uma API REST |
-| **Versão do documento** | 0.1 — 2026-10-20 |
+| **Versão do documento** | 0.4 — 2026-11-11 |
 
 ---
 
@@ -319,7 +319,7 @@ A aplicação inicia como um **monólito modular** expondo uma **API REST**. Ess
 | Banco de dados | PostgreSQL |
 | Migrações | Flyway |
 | Segurança | Spring Security |
-| Testes | JUnit 5, Mockito, Testcontainers |
+| Testes | JUnit 6, Mockito, Testcontainers |
 | Build | Maven |
 | Containerização | Docker |
 | CI | GitHub Actions |
@@ -437,6 +437,7 @@ Essas questões orientam as próximas etapas de investigação.
 | 0.1 | 2026-10-20 | Criação da visão inicial | Organizar proposta, problema, escopo e hipóteses |
 | 0.2 | 2026-10-22 | Reestruturação do documento | Padronizar formato, consolidar conceitos de domínio e roadmap |
 | 0.3 | 2026-10-22 | Inclusão dos termos no código no glossário de domínio | Garantir tradução consistente entre a documentação (pt-BR) e o código (inglês) |
+| 0.4 | 2026-11-11 | Atualização da stack de testes para JUnit 6 | Refletir a versão trazida pelo Spring Boot 4 |
 
 ---
 

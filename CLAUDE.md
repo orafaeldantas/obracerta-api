@@ -11,7 +11,7 @@ Referências:
 
 ## Stack
 
-Java (LTS), Spring Boot, Spring Web, Spring Validation, Spring Data JPA, Spring Security, PostgreSQL, Flyway, JUnit 5, Mockito, Testcontainers, Maven, Docker e GitHub Actions.
+Java (LTS), Spring Boot, Spring Web, Spring Validation, Spring Data JPA, Spring Security, PostgreSQL, Flyway, JUnit 6, Mockito, Testcontainers, Maven, Docker e GitHub Actions.
 
 Dependências novas só entram com justificativa e aprovação prévia.
 
@@ -30,6 +30,7 @@ Testes de integração usam Testcontainers e exigem Docker em execução.
 
 - **Código, identificadores, endpoints, mensagens de commit e logs:** inglês.
 - **Documentação de produto e regras de negócio:** português (pt-BR).
+- **README:** inglês, por ser a porta de entrada do repositório; aponta para a documentação em pt-BR.
 - **Termos de domínio:** usar exclusivamente a tradução definida no glossário de `docs/visao.md`. Um termo novo entra no glossário antes de entrar no código.
 
 ## Arquitetura
