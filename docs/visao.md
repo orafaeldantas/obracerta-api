@@ -9,7 +9,7 @@
 | **Público inicial** | Construções e reformas residenciais |
 | **Backend** | Java (LTS) + Spring Boot |
 | **Arquitetura inicial** | Monólito modular expondo uma API REST |
-| **Versão do documento** | 0.4 — 2026-11-11 |
+| **Versão do documento** | 0.5 — 2026-11-16 |
 
 ---
 
@@ -262,6 +262,12 @@ A documentação de produto é mantida em português; o código, em inglês. A c
 | **Saldo disponível** | `availableBalance` | Diferença entre orçamento e valor comprometido |
 | **Estorno** | `Reversal` | Reversão total ou parcial de um pagamento, registrada sem apagar o lançamento original |
 | **Cancelamento** | `Cancellation` | Anulação de uma despesa, preservando seu registro no histórico |
+| **Proprietário** | `owner` | Usuário que cadastrou a obra e o único com acesso a ela |
+| **Endereço** | `Address` | Localização da obra: CEP (`postalCode`), logradouro (`street`), número (`number`), complemento (`complement`), bairro (`district`), cidade (`city`) e UF (`state`) |
+| **Início planejado** | `plannedStartDate` | Data prevista para o início da execução da obra |
+| **Término planejado** | `plannedEndDate` | Data prevista para o término da execução da obra |
+| **Estado da obra** | `ConstructionStatus` | Etapa do ciclo de vida da obra: em planejamento (`PLANNED`), em andamento (`IN_PROGRESS`), concluída (`COMPLETED`) ou cancelada (`CANCELLED`) |
+| **Obra cancelada** | `CANCELLED` | Estado final de uma obra interrompida sem conclusão. Não se confunde com **Cancelamento** (`Cancellation`), que é o registro que anula uma despesa |
 
 ---
 
@@ -271,11 +277,7 @@ Cada módulo terá suas regras especificadas e documentadas antes da implementa�
 
 ### 9.1. Gestão de obras
 
-- Quem pode criar uma obra?
-- Uma obra pode ter vários responsáveis?
-- Quais são os estados possíveis e suas transições?
-- O que acontece quando uma obra é encerrada?
-- Quais alterações devem ser registradas no histórico?
+Especificadas em [`regras/gestao-de-obras.md`](regras/gestao-de-obras.md): quem pode criar uma obra, quem tem acesso a ela, seus estados e transições, e o que acontece quando é encerrada. Permanecem em aberto as alterações que devem ser registradas no histórico.
 
 ### 9.2. Financeiro
 
@@ -438,6 +440,7 @@ Essas questões orientam as próximas etapas de investigação.
 | 0.2 | 2026-10-22 | Reestruturação do documento | Padronizar formato, consolidar conceitos de domínio e roadmap |
 | 0.3 | 2026-10-22 | Inclusão dos termos no código no glossário de domínio | Garantir tradução consistente entre a documentação (pt-BR) e o código (inglês) |
 | 0.4 | 2026-11-11 | Atualização da stack de testes para JUnit 6 | Refletir a versão trazida pelo Spring Boot 4 |
+| 0.5 | 2026-11-16 | Termos da gestão de obras no glossário; regras da seção 9.1 especificadas | Preparar a implementação do cadastro de obras |
 
 ---
 
